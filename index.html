@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danial AI</title>
+
+    <!-- Markdown + syntax highlighting -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/styles/github-dark.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/lib/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/lib/languages/javascript.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/lib/languages/python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/lib/languages/html.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/lib/languages/css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/lib/languages/json.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <aside class="sidebar" id="sidebar">
+            <div class="side-head">
+                <div class="brand">
+                    <div class="logo">✦</div>
+                    <div>
+                        <h1>Danial AI</h1>
+                        <p>Personal AI Client</p>
+                    </div>
+                </div>
+                <button class="close-side" id="closeSidebar">×</button>
+            </div>
+
+            <button class="new-chat" id="newChatBtn">＋ New chat</button>
+
+            <div class="chat-list" id="chatList"></div>
+
+            <div class="side-bottom">
+                <button class="settings-btn" id="settingsBtn">⚙ Settings</button>
+                <div class="local-note">Chats are stored locally in this browser.</div>
+            </div>
+        </aside>
+
+        <div class="scrim" id="scrim"></div>
+
+        <section class="main">
+            <header class="topbar">
+                <div class="top-left">
+                    <button class="menu-btn" id="menuBtn">☰</button>
+                    <div>
+                        <h2 id="chatTitle">New chat</h2>
+                        <span id="modelLabel">deepseek/deepseek-v4-flash-free</span>
+                    </div>
+                </div>
+                <button class="top-settings" id="topSettings">⚙</button>
+            </header>
+
+            <main class="chat" id="chat"></main>
+
+            <div id="status" class="status"></div>
+
+            <form id="messageForm" class="composer">
+                <textarea id="messageInput" rows="1" placeholder="Message Danial AI..." autocomplete="off"></textarea>
+                <div class="composer-bottom">
+                    <span class="hint">Enter to send · Shift+Enter for new line</span>
+                    <button id="sendBtn" type="submit" aria-label="Send">➤</button>
+                </div>
+            </form>
+
+            <footer>Danial AI · Powered by OrcaRouter</footer>
+        </section>
+    </div>
+
+    <div class="modal-backdrop" id="settingsModal">
+        <section class="settings-card">
+            <div class="settings-head">
+                <div>
+                    <h3>Danial AI Settings</h3>
+                    <p>Control the request sent to the API.</p>
+                </div>
+                <button id="closeSettings">×</button>
+            </div>
+
+            <label>API Key</label>
+            <input id="apiKeyInput" type="password" placeholder="Paste your OrcaRouter API key">
+
+            <div class="setting-row">
+                <div class="field">
+                    <label>Model</label>
+                    <select id="modelSelect"></select>
+                </div>
+                <button class="small-btn" id="loadModelsBtn" type="button">↻ Load models</button>
+            </div>
+
+            <label>System Prompt</label>
+            <textarea id="systemPrompt" rows="5" placeholder="Optional. Leave empty if you do not want a system instruction."></textarea>
+
+            <div class="setting-row">
+                <div class="field">
+                    <label>Temperature <span id="tempValue">0.7</span></label>
+                    <input id="temperature" type="range" min="0" max="2" step="0.1" value="0.7">
+                </div>
+            </div>
+
+            <div class="settings-actions">
+                <button class="cancel-btn" id="cancelSettings" type="button">Cancel</button>
+                <button class="save-btn" id="saveSettings" type="button">Save settings</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
