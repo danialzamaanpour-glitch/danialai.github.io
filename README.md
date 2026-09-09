@@ -1,4 +1,4 @@
-# danialai.github.io
+# DanialAI.github.io
 
 Danial AI support:
 
