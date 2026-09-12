@@ -1,5 +1,5 @@
 const BASE_URL = "https://api.orcarouter.ai/v1";
-const DEFAULT_MODEL = "deepseek/deepseek-v4-flash-free";
+const DEFAULT_MODEL = "free/gemini-3.8-flash";
 const API_KEY = "sk-apx0c33fc126db7cd59378fd068f1b9e15de8cbf0551567f3c";
 
 const $ = id => document.getElementById(id);
