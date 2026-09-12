@@ -1,6 +1,6 @@
 const BASE_URL = "https://api.orcarouter.ai/v1";
 const DEFAULT_MODEL = "deepseek/deepseek-v4-flash-free";
-const API_KEY = "sk-orca-ec2r2p2BgPC8rlHyyJuahQCUKkBHDxIhIBPDpYEWC92";
+const API_KEY = "sk-apx0c33fc126db7cd59378fd068f1b9e15de8cbf0551567f3c";
 
 const $ = id => document.getElementById(id);
 const chat = $("chat"), input = $("messageInput"), form = $("messageForm");
