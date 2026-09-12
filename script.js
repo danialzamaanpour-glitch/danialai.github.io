@@ -1,5 +1,5 @@
 const BASE_URL = "https://api.bazaarlink.ai/v1";
-const DEFAULT_MODEL = "free/gemini-3.8-flash";
+const DEFAULT_MODEL = "qwen3.7-flash";
 const API_KEY = "sk-bl-ne29MakzpTnL_sOrzSArzJDyFpJp35OWu9CYGRdc3JmylPeA";
 
 const $ = id => document.getElementById(id);
