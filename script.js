@@ -1,4 +1,4 @@
-const BASE_URL = "https://api.apinex.bond/v1";
+const BASE_URL = "https://api.bazaarlink.ai/v1";
 const DEFAULT_MODEL = "free/gemini-3.8-flash";
 const API_KEY = "sk-bl-ne29MakzpTnL_sOrzSArzJDyFpJp35OWu9CYGRdc3JmylPeA";
 
