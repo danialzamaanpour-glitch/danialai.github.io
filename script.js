@@ -1,5 +1,5 @@
 const BASE_URL = "https://api.bazaarlink.ai/v1";
-const DEFAULT_MODEL = "qwen3.7-flash";
+const DEFAULT_MODEL = "deepseek/deepseek-v4-flash-free";
 const API_KEY = "sk-orca-0erJ9kXISjQ3uJYYifa4ZGdfO2W7fu3Vwg6UIXJyErZ";
 
 const $ = id => document.getElementById(id);
