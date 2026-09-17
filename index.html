@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Danial AI</title><link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/15.0.7/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<script src="https://js.puter.com/v2/"></script>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+<div class="sidebar-top"><button id="newChatBtn" class="new-chat-btn">＋ New chat</button></div>
+<div class="chat-list-wrap"><div class="section-title">Chats</div><div id="chatList" class="chat-list"></div></div>
+<div class="sidebar-bottom">
+<button id="signInBtn" class="account-btn"><span class="account-icon">↪</span><span id="accountText">Sign in</span></button>
+<button id="signOutBtn" class="account-btn hidden"><span class="account-icon">↩</span><span>Sign out</span></button>
+</div>
+</aside>
+<section class="main">
+<header class="topbar"><div class="brand"><div class="logo">✦</div><div><h1>Danial AI</h1><p>GPT-5.6 Luna</p></div></div><div class="top-actions"><span id="statusDot" class="status-dot"></span><button id="clearBtn" class="icon-btn" title="Clear current chat">⌫</button></div></header>
+<main id="chat" class="chat"><div class="welcome"><div class="welcome-icon">✦</div><h2>How can I help?</h2><p>Ask anything. Your messages are answered by GPT-5.6 Luna through Puter.</p></div></main>
+<div id="status" class="status"></div>
+<form id="messageForm" class="composer"><textarea id="messageInput" rows="1" placeholder="Message Danial AI..." autocomplete="off"></textarea><button id="sendBtn" type="submit" aria-label="Send message">➤</button></form>
+<div class="footer">Powered by Puter.js • GPT-5.6 Luna</div>
+</section></div>
+<div id="toast" class="toast"></div><script src="script.js"></script>
+</body></html>
